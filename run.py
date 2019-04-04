@@ -16,6 +16,7 @@ parser.add_argument('--batch_size','-b', default=8, type=int)
 parser.add_argument('--gpu','-g', default= 1., type=float)
 parser.add_argument('--epochs','-e', default= 100, type=int)
 parser.add_argument('--learning_late','-r', default= 1e-4, type=float)
+parser.add_argument('--threshold','-th', default= 0.01, type=float)
 args = parser.parse_args()
 
 options_train_weight = {"model": args.model, 
@@ -48,12 +49,14 @@ options_predict_ckpt = {"model": args.model,
            "load": args.ckpt,
            "batch": args.batch_size,
            "imgdir": args.imgdir,
+           "thresfold": args.thresfold,
            "gpu": args.gpu}
 
 options_predict_weight = {"model": args.model, 
            "load": args.weight,
            "batch": args.batch_size,
            "imgdir": args.imgdir,
+           "thresfold": args.thresfold,
            "gpu": args.gpu}
 
 load_type = {"n":options_train_null,"c":options_train_ckpt,"w":options_train_weight}
