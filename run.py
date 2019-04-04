@@ -23,8 +23,8 @@ options_train_weight = {"model": args.model,
            "epoch": args.epochs,
            "gpu": args.gpu,
            "train": True,
-           "annotation": "./annotations/",
-           "dataset": "./images/"}
+           "annotation": args.annotation,
+           "dataset": args.dataset}
 
 options_train_ckpt = {"model": args.model, 
            "load": args.ckpt,
@@ -32,16 +32,16 @@ options_train_ckpt = {"model": args.model,
            "epoch": args.epochs,
            "gpu": args.gpu,
            "train": True,
-           "annotation": "./annotations/",
-           "dataset": "./images/"}
+           "annotation": args.annotation,
+           "dataset": args.dataset}
 
 options_train_null = {"model": args.model, 
            "batch": args.batch_size,
            "epoch": args.epochs,
            "gpu": args.gpu,
            "train": True,
-           "annotation": "./annotations/",
-           "dataset": "./images/"}
+           "annotation": args.annotation,
+           "dataset": args.dataset}
 
 options_predict_ckpt = {"model": args.model, 
            "load": args.ckpt,
