@@ -1,6 +1,7 @@
 import numpy as np
 from darkflow.net.build import TFNet
 import argparse
+import cv2
 
 parser = argparse.ArgumentParser(description='Running')
 parser.add_argument('--model','-m', default="cfg/tiny-yolo_custom.cfg", type=str)
