@@ -49,14 +49,14 @@ options_predict_ckpt = {"model": args.model,
            "load": args.ckpt,
            "batch": args.batch_size,
            "imgdir": args.imgdir,
-           "thresfold": args.thresfold,
+           "thresfold": args.threshold,
            "gpu": args.gpu}
 
 options_predict_weight = {"model": args.model, 
            "load": args.weight,
            "batch": args.batch_size,
            "imgdir": args.imgdir,
-           "thresfold": args.thresfold,
+           "thresfold": args.threshold,
            "gpu": args.gpu}
 
 load_type = {"n":options_train_null,"c":options_train_ckpt,"w":options_train_weight}
