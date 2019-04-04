@@ -69,4 +69,4 @@ else :
         tfnet.load_from_ckpt()
     imgcv = cv2.imread(args.imgdir)
     result = tfnet.return_predict(imgcv)
- 
+    print(results)
